@@ -512,7 +512,7 @@ form {
   place-content: center;
   position: relative;
   --position: 50%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .image-container {
@@ -580,14 +580,4 @@ form {
   pointer-events: none;
   z-index: 20;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-}
-
-.black-zone {
-  width: var(--position);
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: var(--primary-text);
-  z-index: -1;
 }
