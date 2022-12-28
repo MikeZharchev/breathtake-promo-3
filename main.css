@@ -734,7 +734,7 @@ form {
   }
 
   h1 > .handwritten-part {
-    font-size: 15rem;
+    font-size: 12rem;
     letter-spacing: -2rem;
   }
   h2 {
@@ -753,6 +753,10 @@ form {
   .video-stats {
     border: 4px solid var(--primary-text);
     border-radius: 8px;
+  }
+
+  header {
+    padding: 0 2rem;
   }
 }
 
