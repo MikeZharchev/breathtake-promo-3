@@ -14,16 +14,17 @@
         <p>Get the app for free</p>
         <p>Write & finish</p>
       </div> -->
-      <header>
+      <header class="header header--placeholder hidden"></header>
+      <header class="header--actual">
         <img src="/img/logo.svg" alt="Breathtake logo" />
         <ul class="menu">
-          <li class="menu-item"><a href="#">About us</a></li>
-          <li class="menu-item"><a href="#">Pricing</a></li>
-          <li class="menu-item"><a href="#">Blog</a></li>
-          <li class="menu-item">
-            <button class="btn btn--menu">Try for free</button>
-          </li>
+          <li class="menu-item anchor--1">Made for writers</li>
+          <li class="menu-item anchor--2">Write visually</li>
+          <li class="menu-item anchor--3">Wear different hats</li>
+          <li class="menu-item anchor--4">Link ideas</li>
+          <li class="menu-item anchor--5">Track results</li>
         </ul>
+        <button class="btn btn--menu anchor--0 btn--cta">Try for free</button>
       </header>
       <div class="sections-wrapper">
         <section class="section section--hero">
@@ -31,16 +32,16 @@
             <h1>
               <span class="handwritten-part">Write &</span
               ><br />Finish<br />your<br />book <br />
-              <span class="small-note small-note-hero-pos"
+              <span class="small-note small-note--hero-pos"
                 >or whatever <br />
                 you`re<br />
                 writing</span
               >
             </h1>
             <p class="subtext">
-              Distraction-free writing app to get you finished.
+              A visual planning and structuring app to help you focus and finish.
             </p>
-            <button class="btn btn--cta">Get the app for free</button>
+            <button class="btn btn--large anchor--01">Get the app for free</button>
           </div>
           <div class="col col--right">
             <div class="image-wrapper flex-align-start">
@@ -54,7 +55,7 @@
             </div>
           </div>
         </section>
-        <section id="designed-for-writers">
+        <section id="designed-for-writers" class="section section--for-writers">
           <div class="message-wrapper">
             <h2>
               Designed for writers
@@ -64,26 +65,25 @@
               >
             </h2>
             <p class="desc">
-              Distraction-free, easy-to-use, rich texh writing tool that helps
-              to get your thoughts together.
+              Forget ugly markdown symbols and enjoy the rich text format. Use stickers to mark the sections of your manuscript that you want to revisit or revise. Easily see where you are in your writing process and identify areas that you need to focus on.
             </p>
           </div>
 
           <div class="image-wrapper">
-            <div class="sticker sticker--yellow draggable">Project-based</div>
-            <div class="sticker sticker--pink draggable">
+            <div class="sticker sticker--yellow st-left">Project-based</div>
+            <div class="sticker sticker--pink st-left">
               Shortcuts for everything
             </div>
-            <div class="sticker sticker--blue draggable">
+            <div class="sticker sticker--blue st-left">
               Easy-touse UI & navigation
             </div>
-            <div class="sticker sticker--pink-2 draggable">
+            <div class="sticker sticker--pink-2 st-right">
               Yes! Use stickers!
             </div>
-            <div class="sticker sticker--green draggable">
+            <div class="sticker sticker--green st-right">
               Rich text format. Forget markdown.
             </div>
-            <div class="sticker sticker--yellow-2 draggable">
+            <div class="sticker sticker--yellow-2 st-right">
               Your text looks great!
             </div>
             <img
@@ -95,7 +95,41 @@
             />
           </div>
         </section>
-        <section id="wear-hats">
+        <section id="write-visually" class="section section--visually">
+          <div class="message-wrapper">
+            <h2>
+              Plan like a PRO
+ 
+            </h2>
+            <p class="desc">
+              Plan and organize the plot and structure of your novel. See the
+              big picture of your novel's progression and ensure that each
+              chapter fits into the grand scale of your story. Understand your
+              plot, characters, and themes, and make the writing process more
+              efficient and effective.
+            </p>
+          </div>
+
+          <div class="image-wrapper">
+            <div class="video-player">
+              <video
+                
+                class="video-stats"
+                autoplay
+                loop
+                muted
+                playsinline
+                poster="/img/poster-hero.png"
+                src="/video/canvas.mp4"
+              >
+                <source src="/video/autocomplete.mp4" type="video/mp4" />
+                <!-- <source src="/video/overview.ogg" type="video/ogg" /> -->
+                Your browser does not support HTML5 video.
+              </video>
+          </div>
+        </section>
+
+        <section id="wear-hats" class="section section--wear-hats">
           <div class="message-wrapper">
             <h2>Wear different hats</h2>
             <p class="desc">
@@ -132,18 +166,37 @@
             </div>
           </div>
         </section>
-        <section id="link-ideas">
-          <h2>Link it all together</h2>
-          <p class="desc">
-            Use bi-derectional links to your ideas and concepts
-          </p>
+        <section id="link-ideas" class="section section--link-ideas">
+          <div class="message-wrapper">
+            <h2>Link concepts and ideas</h2>
+            <p class="desc">
+              By linking related ideas and concepts, you can create a clear and cohesive document structure that will allow you to navigate in both directions, providing more flexibility and control over your manuscript. 
+            </p>  
+            
+          </div>
+          <div class="video-wrapper-hero">
+            <div class="video-player">
+              <video
+                width="960"
+                class="video-stats"
+                autoplay
+                loop
+                muted
+                playsinline
+                poster="/img/poster-hero.png"
+                src="/video/links-scaled.mp4"
+              >
+                <source src="/video/autocomplete.mp4" type="video/mp4" />
+                <!-- <source src="/video/overview.ogg" type="video/ogg" /> -->
+                Your browser does not support HTML5 video.
+              </video>
+          </div>
         </section>
-        <section class="link-ideas" id="link-ideas">
+        <section id="section-track" class="section section--track">
           <div class="message-wrapper">
             <h2>Track your progress</h2>
             <p class="desc">
-              Design your text to make the most impact. Track your progress to
-              get results.
+              Check your current position in the manuscript. View project, chapter, and sheet statistics. Review reading time.
             </p>
           </div>
 
@@ -161,28 +214,13 @@
 
               Your browser does not support HTML5 video.
             </video>
-            <div class="notes-wrapper notes-wrapper--1">
-              <p class="small-note fixed-width">
-                Current position in the manuscript
-              </p>
-              <img class="arr arr--left" src="/img/left-arr.svg" alt="" />
-            </div>
-            <div class="notes-wrapper notes-wrapper--2">
-              <p class="small-note fixed-width">
-                Switch between project, chapter and sheet stats
-              </p>
-              <img class="arr arr--center" src="/img/center-arr.svg" alt="" />
-            </div>
-            <div class="notes-wrapper notes-wrapper--3">
-              <p class="small-note fixed-width">Reading time & much more</p>
-              <img class="arr arr--right" src="/img/right-arr.svg" alt="" />
-            </div>
+
           </div>
         </section>
-        <section class="theming">
+        <section id="section-themes" class="section section--themes">
           <div class="message-wrapper">
-            <h2>Work day or night</h2>
-            <p class="desc">Breathtake is adjasting for your style</p>
+            <h2>Write anytime, anywhere</h2>
+            <p class="desc">Whether you prefer to work in the bright light of day or in the cozy comfort of night, our dark and light themes will make sure your words don’t go unnoticed.</p>
           </div>
           <div class="container-theming">
             <div class="image-container">
@@ -212,9 +250,10 @@
           </div>
           <!-- <div class="black-zone"></div> -->
         </section>
-        <section class="section--form">
+
+        <section class="section section--form">
           <div class="message-wrapper">
-            <h2>And much more</h2>
+            <h2>Get the app for free</h2>
             <p class="desc">
               Check our app for free to see Breathtake in action
             </p>
@@ -225,7 +264,7 @@
               type="email"
               placeholder="Enter your email"
             />
-            <button class="btn btn--cta">Get the app</button>
+            <button class="btn btn--large">Get the app</button>
             <p class="small-note no-card-pos">
               No credit<br />
               card required
@@ -235,17 +274,29 @@
 
         <footer>
           <ul class="footer-menu">
-            <li><a href="3">About</a></li>
-            <li><a href="3">Pricing</a></li>
-            <li><a href="3">Blog</a></li>
-            <li><a href="3">Support</a></li>
-            <li><a href="3">Newsletter</a></li>
-            <li><a href="3">Contact us</a></li>
+            <li><a
+              class="footer-link" href="#">About</a></li>
+            <li><a
+              class="footer-link" href="#">Pricing</a></li>
+            <li><a
+              class="footer-link" href="#">Blog</a></li>
+            <li><a
+              class="footer-link" href="#">Support</a></li>
+            <li><a
+              class="footer-link" href="#">Newsletter</a></li>
+            <li><a
+              class="footer-link" href="#">Contact us</a></li>
           </ul>
           <p class="copyright">Copyright © 2022 Breathtaking</p>
           <img src="/img/footer-logo.svg" alt="Breathtake logo" />
         </footer>
       </div>
     </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+      integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </body>
 </html>

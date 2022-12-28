@@ -1,113 +1,26 @@
-// let draggableEl = document.querySelector(".draggable");
-let draggableEls = document.querySelectorAll(".draggable");
+// DOM ELEMENTS //
+const header = document.querySelector(".header--actual");
+const headerPlaceholder = document.querySelector(".header--placeholder");
+const ctaBtns = document.querySelectorAll(".btn--cta");
+const emailInput = document.querySelector(".email-input");
 
-let initX,
-  initY = 0;
-let moveEl = false;
+const sectionHero = document.querySelector(".section--hero");
+const section1 = document.querySelector(".section--for-writers");
+const section2 = document.querySelector(".section--visually");
+const section3 = document.querySelector(".section--wear-hats");
+const section4 = document.querySelector(".section--link-ideas");
+const section5 = document.querySelector(".section--track");
+const section6 = document.querySelector(".section--themes");
+const sectionForm = document.querySelector(".section--form");
 
-let events = {
-  mouse: {
-    down: "mousedown",
-    move: "mousemove",
-    up: "mouseup",
-  },
-  touch: {
-    down: "touchstart",
-    move: "touchmove",
-    up: "touchend",
-  },
-};
-
-let deviceType = "";
-
-// Detect device
-const isTouchDevice = () => {
-  try {
-    // Try to create touch event
-    document.createEvent("TouchEvent");
-    deviceType = "touch";
-    return true;
-  } catch (e) {
-    deviceType = "mouse";
-    return false;
-  }
-};
-
-isTouchDevice();
-
-// Start mouse down / touch start
-
-draggableEls.forEach((el) => {
-  el.addEventListener(events[deviceType].down, (e) => {
-    initX = e.clientX;
-    initY = e.clientY;
-    moveEl = true;
-  });
-});
-
-// draggableEl.addEventListener(events[deviceType].down, (e) => {
-//   e.preventDefault();
-//   initX = e.clientX;
-//   initY = e.clientY;
-//   moveEl = true;
-// });
-
-// Move
-
-draggableEls.forEach((el) => {
-  el.addEventListener(events[deviceType].move, (e) => {
-    if (moveEl) {
-      e.preventDefault();
-      let newX = e.clientX;
-      let newY = e.clientY;
-      el.style.top = el.offsetTop - (initY - newY) + "px";
-      el.style.left = el.offsetLeft - (initX - newX) + "px";
-      initX = newX;
-      initY = newY;
-    }
-  });
-});
-
-// draggableEl.addEventListener(events[deviceType].move, (e) => {
-//   if (moveEl) {
-//     e.preventDefault();
-//     let newX = e.clientX;
-//     let newY = e.clientY;
-//     draggableEl.style.top = draggableEl.offsetTop - (initY - newY) + "px";
-//     draggableEl.style.left = draggableEl.offsetLeft - (initX - newX) + "px";
-//     initX = newX;
-//     initY = newY;
-//   }
-// });
-
-// Mouse up
-let stopMovement;
-
-draggableEls.forEach((el) => {
-  el.addEventListener(events[deviceType].up, (stopMovement = e) => {
-    moveEl = false;
-  });
-});
-
-// draggableEl.addEventListener(events[deviceType].up, (stopMovement = e) => {
-//   moveEl = false;
-// });
-
-draggableEls.forEach((el) => {
-  el.addEventListener("mouseleave", stopMovement);
-});
-
-// draggableEl.addEventListener("mouseleave", stopMovement);
-
-draggableEls.forEach((el) => {
-  el.addEventListener(events[deviceType].up, (e) => {
-    moveEl = false;
-  });
-});
-
-// draggableEl.addEventListener(events[deviceType].up, (e) => {
-//   moveEl = false;
-// });
+// const anchor0 = document.querySelector(".anchor--0");
+const anchor0 = document.querySelector(".anchor--0");
+const anchor01 = document.querySelector(".anchor--01");
+const anchor1 = document.querySelector(".anchor--1");
+const anchor2 = document.querySelector(".anchor--2");
+const anchor3 = document.querySelector(".anchor--3");
+const anchor4 = document.querySelector(".anchor--4");
+const anchor5 = document.querySelector(".anchor--5");
 
 // Slider magic
 const container = document.querySelector(".container-theming");
@@ -143,3 +56,64 @@ function videoScroll() {
     }
   }
 }
+
+// SMOOTH SCROLLING //
+// SMOOTH SCROLLING
+// Event listeners
+ctaBtns.forEach((element) => {
+  element.addEventListener("click", () => {
+    sectionHero.scrollIntoView({ behavior: "smooth", block: "end" });
+    setTimeout(() => {
+      // emailInput.focus();
+    }, 1000);
+  });
+});
+
+anchor0.addEventListener("click", () => {
+  sectionForm.scrollIntoView({ behavior: "smooth", block: "end" });
+  setTimeout(() => {
+    emailInput.focus();
+  }, 1000);
+});
+anchor01.addEventListener("click", () => {
+  sectionForm.scrollIntoView({ behavior: "smooth", block: "end" });
+  setTimeout(() => {
+    emailInput.focus();
+  }, 1000);
+});
+anchor1.addEventListener("click", () => {
+  section1.scrollIntoView({ behavior: "smooth" });
+});
+anchor2.addEventListener("click", () => {
+  section2.scrollIntoView({ behavior: "smooth" });
+});
+anchor3.addEventListener("click", () => {
+  section3.scrollIntoView({ behavior: "smooth" });
+});
+anchor4.addEventListener("click", () => {
+  section4.scrollIntoView({ behavior: "smooth" });
+});
+anchor5.addEventListener("click", () => {
+  section5.scrollIntoView({ behavior: "smooth" });
+});
+
+// STICKY NAV //
+// STICKY NAV
+
+const stickyHeader = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) {
+    header.classList.add("header-sticky");
+    headerPlaceholder.classList.remove("hidden");
+  } else {
+    headerPlaceholder.classList.add("hidden");
+    header.classList.remove("header-sticky");
+  }
+};
+
+const observer = new IntersectionObserver(stickyHeader, {
+  root: null,
+  threshold: 0,
+  rootMargin: "-80px",
+});
+observer.observe(sectionHero);
