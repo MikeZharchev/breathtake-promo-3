@@ -752,6 +752,7 @@ form {
   }
   .video-stats {
     border: 4px solid var(--primary-text);
+    border-radius: 8px;
   }
 }
 
