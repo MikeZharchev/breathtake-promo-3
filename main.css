@@ -758,6 +758,13 @@ form {
   header {
     padding: 0 2rem;
   }
+  .st-left {
+    transform: scale(0.7) translateY(-32%) translateX(50%);
+  }
+
+  .st-right {
+    transform: scale(0.7) translateY(-32%) translateX(-50%);
+  }
 }
 
 @media only screen and (max-width: 600px) {
