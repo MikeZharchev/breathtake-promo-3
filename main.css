@@ -633,12 +633,7 @@ form {
 
 /*///////////// MEDIA QUERIES ////////////*/
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-}
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-}
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 1450px) {
   .small-note--hero-pos {
@@ -646,6 +641,14 @@ form {
   }
 }
 @media only screen and (max-width: 1000px) {
+  .image-wrapper {
+    width: 100%;
+    height: auto;
+  }
+  .hero-image {
+    width: 100%;
+    height: auto;
+  }
   .section {
     padding: 10rem 4rem;
     gap: 4rem;
@@ -726,17 +729,28 @@ form {
 }
 
 @media only screen and (max-width: 640px) {
+  h1 {
+    font-size: 10rem;
+  }
+
+  h1 > .handwritten-part {
+    font-size: 15rem;
+    letter-spacing: -2rem;
+  }
   h2 {
-    font-size: 5.6rem;
+    font-size: 4.8rem;
     line-height: 100%;
   }
 
   .section {
-    padding: 8rem 3.2rem;
+    padding: 6.4rem 3.2rem;
     gap: 4rem;
   }
 
   p.hr-heading {
     font-size: 8rem;
   }
+}
+
+@media only screen and (max-width: 600px) {
 }
