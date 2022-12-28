@@ -237,6 +237,12 @@ section {
 
 .image-wrapper {
   position: relative;
+  width: 70%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
 }
 
 .flex-align-start {
