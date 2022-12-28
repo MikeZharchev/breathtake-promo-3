@@ -635,9 +635,6 @@ form {
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 1450px) {
-  body {
-    background-color: rgb(188, 199, 194);
-  }
   .small-note--hero-pos {
     display: none;
   }
@@ -710,10 +707,6 @@ form {
 }
 
 @media only screen and (max-width: 850px) {
-  body {
-    background-color: rgb(226, 226, 226);
-  }
-
   /* .sticker {
     transform: scale(0.7);
   } */
