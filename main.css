@@ -539,6 +539,7 @@ form {
 }
 
 .image-container {
+  position: relative;
   max-width: 1038px;
   max-height: 678px;
   /* aspect-ratio: 16/9; */
@@ -759,11 +760,11 @@ form {
     padding: 0 2rem;
   }
   .st-left {
-    transform: scale(0.7) translateY(-32%) translateX(50%);
+    transform: scale(0.4) translateY(-32%) translateX(50%);
   }
 
   .st-right {
-    transform: scale(0.7) translateY(-32%) translateX(-50%);
+    transform: scale(0.4) translateY(-32%) translateX(-50%);
   }
 }
 
