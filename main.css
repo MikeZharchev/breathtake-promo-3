@@ -766,6 +766,9 @@ form {
   .st-right {
     transform: scale(0.4) translateY(-32%) translateX(-50%);
   }
+  form {
+    flex-direction: column;
+  }
 }
 
 @media only screen and (max-width: 600px) {
