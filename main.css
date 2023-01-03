@@ -156,6 +156,10 @@ header {
   position: relative;
 }
 
+a {
+  color: var(--primary-text);
+}
+
 .menu {
   gap: 5.6rem;
   font-weight: 500;
@@ -192,6 +196,10 @@ p {
   max-width: 40ch;
 }
 
+.subtext--small {
+  font-size: 1.6rem;
+}
+
 .menu-item:hover {
   opacity: 0.64;
 }
@@ -205,6 +213,14 @@ p {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   color: var(--white);
+}
+
+.btn--login {
+  background: unset;
+  color: var(--primary-text);
+  cursor: pointer;
+  transition: all 0.3 ease-in-out;
+  font-size: 1.5rem;
 }
 
 .btn--menu {
@@ -260,6 +276,12 @@ section {
   overflow: hidden;
 }
 
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .col {
   display: flex;
   flex-direction: column;
@@ -412,6 +434,11 @@ p.desc-small {
   max-width: 30ch;
 }
 
+.menu-button-wrapper {
+  display: flex;
+  gap: 0.8rem;
+}
+
 /* Footer */
 footer {
   background-color: var(--primary-text);
@@ -420,7 +447,7 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 4rem;
   color: var(--light-grey);
   padding: 8rem 12rem;
 }
@@ -438,8 +465,9 @@ footer > ul {
   color: var(--light-grey);
 }
 
-.copyright {
+p.copyright {
   font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* Video */

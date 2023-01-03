@@ -22,10 +22,7 @@
   </head>
   <body>
     <main class="container">
-      <!-- <div class="upper-header hidden">
-        <p>Get the app for free</p>
-        <p>Write & finish</p>
-      </div> -->
+
       <header class="header header--placeholder hidden"></header>
       <header class="header--actual">
         <img src="/img/logo.svg" alt="Breathtake logo" />
@@ -36,7 +33,11 @@
           <li class="menu-item anchor--4">Link ideas</li>
           <li class="menu-item anchor--5">Track results</li>
         </ul>
-        <button class="btn btn--menu anchor--0 btn--cta">Try for free</button>
+        <div class="menu-button-wrapper">
+          <button class="btn btn--menu anchor--0 btn--cta btn--login">Log in to Beta</button>
+        <button class="btn btn--menu anchor--0 btn--cta">Request invite</button>
+        </div>
+        
       </header>
       <div class="sections-wrapper">
         <section class="section section--hero">
@@ -50,10 +51,27 @@
                 writing</span
               >
             </h1>
-            <p class="subtext">
+
+            <!-- <p class="subtext">
               A visual planning and structuring app to help you focus and finish.
+            </p> -->
+            <!-- <button class="btn btn--large anchor--01">Request invite</button> -->
+            <form action="submit">
+              <input
+                class="email-input"
+                type="email"
+                placeholder="Enter your email"
+              />
+              <button class="btn btn--large anchor--01">Request invite</button>
+              
+              <!-- <p class="small-note no-card-pos">
+                No credit<br />
+                card required
+              </p> -->
+            </form>
+            <p class="subtext subtext--small">
+              Already have an access? <a href="#">Enter the Beta</a> 
             </p>
-            <button class="btn btn--large anchor--01">Get the app for free</button>
           </div>
           <div class="col col--right">
             <div class="image-wrapper flex-align-start">
@@ -110,7 +128,7 @@
         <section id="write-visually" class="section section--visually">
           <div class="message-wrapper">
             <h2>
-              Plan like a PRO
+              Write visually
  
             </h2>
             <p class="desc">
@@ -272,7 +290,7 @@
 
         <section class="section section--form">
           <div class="message-wrapper">
-            <h2>Get the app for free</h2>
+            <h2>Request invite</h2>
             <p class="desc">
               Check our app for free to see Breathtake in action
             </p>
@@ -283,7 +301,7 @@
               type="email"
               placeholder="Enter your email"
             />
-            <button class="btn btn--large">Get the app</button>
+            <button class="btn btn--large">Request invite</button>
             <p class="small-note no-card-pos">
               No credit<br />
               card required
@@ -291,7 +309,7 @@
           </form>
         </section>
 
-        <footer>
+        <footer><img src="/img/footer-logo.svg" alt="Breathtake logo" />
           <ul class="footer-menu">
             <li><a
               class="footer-link" href="#">About</a></li>
@@ -306,8 +324,8 @@
             <li><a
               class="footer-link" href="#">Contact us</a></li>
           </ul>
-          <p class="copyright">Copyright © 2022 Breathtaking</p>
-          <img src="/img/footer-logo.svg" alt="Breathtake logo" />
+          <p class="copyright">Copyright © 2022 Breathtake</p>
+          
         </footer>
       </div>
     </main>
