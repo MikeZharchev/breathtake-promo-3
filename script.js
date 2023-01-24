@@ -84,9 +84,9 @@ anchor01.addEventListener("click", () => {
 anchor1.addEventListener("click", () => {
   section1.scrollIntoView({ behavior: "smooth" });
 });
-anchor2.addEventListener("click", () => {
-  section2.scrollIntoView({ behavior: "smooth" });
-});
+// anchor2.addEventListener("click", () => {
+//   section2.scrollIntoView({ behavior: "smooth" });
+// });
 anchor3.addEventListener("click", () => {
   section3.scrollIntoView({ behavior: "smooth" });
 });
