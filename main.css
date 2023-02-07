@@ -831,6 +831,20 @@ form {
   form {
     flex-direction: column;
   }
+  .col {
+    /* background-color: red; */
+    width: 100%;
+    gap: unset;
+    flex-direction: column;
+  }
+  .col * {
+    text-align: center;
+    max-width: 60ch;
+  }
+
+  .testimonial-avatar {
+    margin-bottom: 1.6rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
