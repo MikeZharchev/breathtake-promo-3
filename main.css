@@ -283,16 +283,9 @@ section {
   justify-content: center;
   align-items: center;
 }
-.col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 .col--left {
   width: 60%;
-
   gap: 2rem;
 }
 
@@ -542,7 +535,6 @@ p.copyright {
 /* Form */
 
 form {
-  width: 60%;
   display: flex;
   gap: 1.6rem;
   position: relative;
@@ -682,7 +674,12 @@ form {
     display: none;
   }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) {
+  h2 {
+    font-size: 5.6rem;
+    line-height: 100%;
+  }
+
   .image-wrapper {
     width: 100%;
     height: auto;
@@ -700,9 +697,46 @@ form {
     max-height: unset;
     height: auto;
   }
+
+  .three-col-grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 4rem;
+  }
+
+  .block-wrapper * {
+    text-align: left;
+  }
+
+  .block-wrapper {
+    width: 100%;
+  }
+
+  .col--left-hero {
+    flex-direction: column !important;
+    width: 100%;
+  }
+
+  p.desc-small {
+    max-width: unset;
+  }
+  .col {
+    /* background-color: red; */
+    width: 100%;
+    gap: 4rem;
+    flex-direction: row;
+  }
   .col--right,
   .col--left {
-    width: 100%;
+    width: auto;
+  }
+
+  .testimonial-avatar {
+    margin-bottom: unset;
   }
 
   .small-note--hero-pos {
@@ -735,21 +769,8 @@ form {
     height: auto;
   }
 
-  h2 {
-    font-size: 6.4rem;
-    line-height: 100%;
-  }
-
   .small-note {
     display: none;
-  }
-
-  .three-col-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
   }
 
   form {
